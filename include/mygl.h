@@ -10,7 +10,6 @@
 extern int WIN_W;
 extern int WIN_H;
 
-SDL_Window* glwin_init();//´°¿Ú³õÊ¼»¯         
-
+SDL_Window* glwin_init();
 
 #endif

@@ -5,7 +5,7 @@
 //#include"mygl.h"
 #include<random>
 
-
+//äÖÈ¾Ïß³Ìº¯Êı
 void renderline(SDL_Window* window)//, const renderdata& data, const position& camera)
 {
     //srand(time(NULL));

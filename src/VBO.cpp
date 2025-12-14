@@ -13,7 +13,7 @@ VBO::~VBO()
 {
 	glDeleteBuffers(1, &id);
 }
-
+//更新顶点数据
 void VBO::update(float vertices[], unsigned int&& size)
 {
 	bind();

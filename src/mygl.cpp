@@ -1,5 +1,5 @@
 #include"mygl.h"
-
+//初始化并创建窗口
 SDL_Window* glwin_init()
 {
     // 初始化 SDL

@@ -3,14 +3,14 @@
 //#include<stdio.h>
 #include<vector>
 #include"glAPI.h"
-
+//储存顶点数据布局
 struct layout
 {
 	unsigned int count;
 	unsigned int type;
 	bool normalized;
 };
-
+//顶点缓冲对象
 class VBO {
 	unsigned int id;
 	unsigned int stride;//步长
@@ -23,7 +23,7 @@ public:
 	~VBO();
 
 	void update(float vertices[], unsigned int&& size);//更新顶点数据
-
+	//添加新的顶点布局单元
 	template<typename T>
 	void add(unsigned int count)
 	{
@@ -35,10 +35,12 @@ public:
 		elements.push_back({ count,GL_FLOAT,GL_FALSE });
 		stride += sizeof(float) * count;
 	}
+	//绑定vbo
 	inline void bind() const
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, id);
 	}
+	//取消绑定vbo
 	inline void unbind() const
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, 0);

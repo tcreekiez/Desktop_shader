@@ -1,7 +1,7 @@
 #include "shader.h"
 #include<stdio.h>
 #include<stdlib.h>
-
+//从文件读取着色器代码
 char* GetCodeFrom(const char* file_position)
 {
 	FILE* file = NULL;
@@ -24,8 +24,8 @@ char* GetCodeFrom(const char* file_position)
 	}
 	return nullptr;
 }
-
-Shader::Shader(const char* vs, const char* fs) :id(0)//, unif(NULL)
+//构造函数，以两个着色器的文件位置作为参数
+Shader::Shader(const char* vs, const char* fs) :id(0)
 {
 	char* Vscode = GetCodeFrom(vs);
 	

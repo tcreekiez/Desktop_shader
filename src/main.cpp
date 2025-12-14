@@ -9,6 +9,7 @@ int WIN_H;
 char quit = 0;
 //i_position win_pos = { sc_x,sc_y };
 using namespace std;
+//由EnumWindows调用的回调函数
 int EnumWorkWin1(HWND hwnd, LPARAM lParam)
 {
 	HWND hw=FindWindowExW(hwnd,NULL,L"SHELLDLL_DefView",NULL);

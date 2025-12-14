@@ -11,7 +11,7 @@ IBO::~IBO()
 {
 	glDeleteBuffers(1, &id);
 }
-
+//更新ibo数据
 void IBO::update(unsigned short int indices[], unsigned int&& cou)
 {
 	count = cou;//注意VAO的count没有改变

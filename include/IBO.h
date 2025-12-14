@@ -1,7 +1,7 @@
 #pragma once
 
 #include"glAPI.h"
-
+//Ë÷Òı»º³å¶ÔÏó
 typedef class IBO
 {
 	unsigned int id;
