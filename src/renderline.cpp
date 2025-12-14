@@ -29,7 +29,7 @@ void renderline(SDL_Window* window)//, const renderdata& data, const position& c
         1,-1,
         -1,-1,
         -1,1
-    };
+    };//一个简单的矩形，不像旧工程那样用一整个大三角形是为了测试新的类
     unsigned short order[] =
     {
         2,1,0,

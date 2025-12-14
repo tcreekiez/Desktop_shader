@@ -36,14 +36,18 @@ int main(int argc, char* argv[])
 	//SetWindowPos(win, HWND_BOTTOM, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
 	HWND work_win[2] = { 0,0 };
 	
-	
 	EnumWindows(EnumWorkWin1, (LPARAM)&work_win);
 	work_win[1] = FindWindowExW(0,work_win[0],L"WorkerW",NULL);
+	if (work_win[1] == NULL)
+	{
+		printf("新版win11\n");
+		work_win[1] = FindWindowExW(work_win[0], NULL, L"WorkerW", NULL);
+	}//在室友电脑上测试了有bug，显示不全，不知道原因
 	ShowWindow(work_win[1], SW_SHOW);
 	SetParent(win, work_win[1]);
 	SDL_Event event;
 
-	std::thread render_thread(renderline, window);
+	std::thread render_thread(renderline, window);//渲染线程
 	
 	getchar();
 		
@@ -51,7 +55,7 @@ int main(int argc, char* argv[])
 	render_thread.join();
 	SDL_DestroyWindow(window);
 	SDL_Quit();
-	ShowWindow(work_win[1], SW_HIDE);
+	ShowWindow(work_win[1], SW_HIDE);//恢复窗口
 	
 	return 0;
 }

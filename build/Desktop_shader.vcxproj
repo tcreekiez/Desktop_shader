@@ -332,14 +332,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="F:\repos\CMakeProject1\res\IBO.cpp" />
-    <ClCompile Include="F:\repos\CMakeProject1\res\VAO.cpp" />
-    <ClCompile Include="F:\repos\CMakeProject1\res\VBO.cpp" />
-    <ClCompile Include="F:\repos\CMakeProject1\res\main.cpp" />
-    <ClCompile Include="F:\repos\CMakeProject1\res\mygl.cpp" />
-    <ClCompile Include="F:\repos\CMakeProject1\res\renderer.cpp" />
-    <ClCompile Include="F:\repos\CMakeProject1\res\renderline.cpp" />
-    <ClCompile Include="F:\repos\CMakeProject1\res\shader.cpp" />
+    <ClCompile Include="F:\repos\CMakeProject1\src\IBO.cpp" />
+    <ClCompile Include="F:\repos\CMakeProject1\src\VAO.cpp" />
+    <ClCompile Include="F:\repos\CMakeProject1\src\VBO.cpp" />
+    <ClCompile Include="F:\repos\CMakeProject1\src\main.cpp" />
+    <ClCompile Include="F:\repos\CMakeProject1\src\mygl.cpp" />
+    <ClCompile Include="F:\repos\CMakeProject1\src\renderer.cpp" />
+    <ClCompile Include="F:\repos\CMakeProject1\src\renderline.cpp" />
+    <ClCompile Include="F:\repos\CMakeProject1\src\shader.cpp" />
     <ClCompile Include="F:\repos\CMakeProject1\dependencies\glad\src\glad.c" />
   </ItemGroup>
   <ItemGroup />

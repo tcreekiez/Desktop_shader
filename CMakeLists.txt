@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-file(GLOB_RECURSE SOURCES ${CMAKE_SOURCE_DIR}/res/*.cpp)
+file(GLOB_RECURSE SOURCES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 set(SOURCES ${SOURCES} ${CMAKE_SOURCE_DIR}/dependencies/glad/src/glad.c)
 include_directories(${CMAKE_SOURCE_DIR}/dependencies/glad/include)
 
